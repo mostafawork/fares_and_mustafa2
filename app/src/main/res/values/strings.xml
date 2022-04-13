@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="Full_name">Full name</string>
+    <string name="email_address">Email Address</string>
+    <string name="user_name">User Name</string>
+    <string name="password">password</string>
+    <string name="male">male</string>
+    <string name="Female">Female</string>
+    <string name="save">Save</string>
+    <string name="r_password">Re password</string>
+    <string name="Birthdate">birthdate</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="remember">Remember me ?</string>
+    <string name="Score">Score</string>
+    <string name="welcome">welcome</string>
+    <string name="name">name</string>
+</resources>
