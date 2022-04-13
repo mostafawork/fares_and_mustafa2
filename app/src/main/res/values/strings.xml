@@ -3,7 +3,10 @@
     <string name="Full_name">Full name</string>
     <string name="email_address">Email Address</string>
     <string name="user_name">User Name</string>
+    <string name="enter">Enter a number</string>
     <string name="password">password</string>
+    <string name="check">Check</string>
+    <string name="new_game">new game</string>
     <string name="male">male</string>
     <string name="Female">Female</string>
     <string name="save">Save</string>
@@ -13,6 +16,14 @@
     <string name="register">Register</string>
     <string name="remember">Remember me ?</string>
     <string name="Score">Score</string>
-    <string name="welcome">welcome</string>
+    <string name="welcome">Welcome</string>
     <string name="name">name</string>
+    <string name="show">Show all games</string>
+    <string name="show_last">Show last game date</string>
+    <string name="change">Change password</string>
+    <string name="clear">Clear game history</string>
+    <string name="full">full name</string>
+    <string name="time">Time and date</string>
+    <string name="settings">Settings</string>
+    <string name="login_out">Login out</string>
 </resources>

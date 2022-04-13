@@ -25,8 +25,9 @@
         android:layout_marginTop="15dp"
         android:background="@drawable/shep"
         android:hint="@string/Full_name"
-        android:padding="5dp"
         android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/img" />
@@ -38,9 +39,10 @@
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/shep"
-        android:padding="5dp"
         android:hint="@string/email_address"
         android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:padding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edit_text" />
@@ -51,10 +53,11 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="15dp"
-        android:padding="5dp"
         android:background="@drawable/shep"
         android:hint="@string/user_name"
         android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:padding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edit_text_email" />
@@ -68,6 +71,7 @@
         android:background="@drawable/shep"
         android:hint="@string/password"
         android:inputType="textPassword"
+        android:minHeight="48dp"
         android:padding="5dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/user_name" />
@@ -81,6 +85,7 @@
         android:background="@drawable/shep"
         android:hint="@string/r_password"
         android:inputType="textPassword"
+        android:minHeight="48dp"
         android:padding="5dp"
         app:layout_constraintBottom_toTopOf="@+id/password"
         app:layout_constraintEnd_toEndOf="parent"
@@ -93,6 +98,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="30dp"
+        android:minHeight="48dp"
         android:padding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -129,14 +135,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="50dp"
-            android:text="@string/male" />
+            android:text="@string/male"
+            android:textColor="#37474F"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <RadioButton
             android:id="@+id/female"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="50dp"
-            android:text="@string/Female" />
+            android:text="@string/Female"
+            android:textColor="#37474F"
+            tools:ignore="TouchTargetSizeCheck" />
     </RadioGroup>
 
     <Button
@@ -145,7 +155,6 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="15dp"
         android:layout_marginTop="20dp"
-        android:backgroundTint="@color/black"
         android:padding="5dp"
         android:text="@string/save"
         app:layout_constraintEnd_toEndOf="parent"
