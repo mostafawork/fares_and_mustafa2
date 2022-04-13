@@ -12,5 +12,14 @@ public class Game_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_game);
 
         // fares and mustafa
+        // fares and mustafa
+        // fares and mustafa
+        // fares and mustafa
+        // fares and mustafa
+        // fares and mustafa
+        // fares and mustafa
+        // fares and mustafa
+        // fares and mustafa
+        // fares and mustafa
     }
 }
