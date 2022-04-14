@@ -17,7 +17,8 @@
     <string name="remember">Remember me ?</string>
     <string name="Score">Score</string>
     <string name="welcome">Welcome</string>
-    <string name="name">name</string>
+    <string name="name">name.........</string>
+    <string name="age">age</string>
     <string name="show">Show all games</string>
     <string name="show_last">Show last game date</string>
     <string name="change">Change password</string>
