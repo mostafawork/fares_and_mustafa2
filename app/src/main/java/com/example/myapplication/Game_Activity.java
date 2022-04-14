@@ -10,16 +10,7 @@ public class Game_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+        //ugvvh
 
-        // fares and mustafa
-        // fares and mustafa
-        // fares and mustafa
-        // fares and mustafa
-        // fares and mustafa
-        // fares and mustafa
-        // fares and mustafa
-        // fares and mustafa
-        // fares and mustafa
-        // fares and mustafa
     }
 }
