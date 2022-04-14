@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#C3C6D8"
+    android:orientation="vertical"
     tools:context=".Game_Activity">
 
     <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -18,258 +20,296 @@
         app:layout_constraintVertical_bias="1.0">
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-
-            <TextView
-                android:id="@+id/Score"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/shep"
-                android:padding="5dp"
-                android:text="@string/Score"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.8"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints" />
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/welcome"
-                android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="end"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/Score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shep"
+                        android:padding="5dp"
+                        android:text="@string/Score"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.8"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/welcome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shep"
+                        android:padding="5dp"
+                        android:text="@string/welcome"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/shep"
+                        android:padding="5dp"
+                        android:text="@string/name"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/welcome"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/tv_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/shep"
+                        android:padding="5dp"
+                        android:text="@string/age"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_name"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintStart_toEndOf="@+id/tv_name"
+                        app:layout_constraintTop_toBottomOf="@id/welcome"
+                        app:layout_constraintVertical_bias="0.0"
+                        tools:ignore="MissingConstraints" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="64dp"
-                android:background="@drawable/shep"
-                android:padding="5dp"
-                android:text="@string/welcome"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints" />
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tv_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/shep"
-                android:padding="5dp"
-                android:text="@string/name"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/welcome"
-                tools:ignore="MissingConstraints" />
-
-            <TextView
-                android:id="@+id/tv_age"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/shep"
-                android:padding="5dp"
-                android:text="@string/age"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@+id/tv_name"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.2"
-                app:layout_constraintStart_toEndOf="@+id/tv_name"
-                app:layout_constraintTop_toBottomOf="@id/welcome"
-                app:layout_constraintVertical_bias="0.0"
-                tools:ignore="MissingConstraints" />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraint2"
-                android:layout_width="350dp"
-                android:layout_height="350dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-
-                <TextView
-                    android:id="@+id/number"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:background="@drawable/shep2"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
                     android:gravity="center"
-                    android:padding="5dp"
-                    android:textSize="40sp"
-                    app:layout_constraintEnd_toStartOf="@+id/number2"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="MissingConstraints" />
+                    android:orientation="horizontal"
+                    android:padding="5dp">
 
-                <TextView
-                    android:id="@+id/number2"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginEnd="24dp"
-                    android:background="@drawable/shep2"
+                    <TextView
+                        android:id="@+id/number"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shep2"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textSize="40sp" />
+
+                    <TextView
+                        android:id="@+id/number2"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shep2"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textSize="40sp" />
+
+                    <TextView
+                        android:id="@+id/number3"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shep2"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textSize="40sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:padding="5dp"
-                    android:textSize="40sp"
-                    app:layout_constraintEnd_toStartOf="@id/number3"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="MissingConstraints" />
+                    android:orientation="horizontal"
+                    android:padding="5dp">
 
-                <TextView
-                    android:id="@+id/number3"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:background="@drawable/shep2"
-                    android:padding="5dp"
-                    android:textSize="20sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="MissingConstraints"
-                    tools:layout_editor_absoluteY="0dp" />
 
-                <TextView
-                    android:id="@+id/number4"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="24dp"
-                    android:background="@drawable/shep2"
+                    <TextView
+                        android:id="@+id/number4"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"                        android:layout_height="100dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/shep2"
+                        android:gravity="center"
+                        android:textSize="40sp" />
+
+                    <TextView
+                        android:id="@+id/number5"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"                        android:layout_height="100dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/shep2"
+                        android:gravity="center"
+                        android:textSize="40sp" />
+
+                    <TextView
+                        android:id="@+id/number6"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shep2"
+                        android:gravity="center"
+                        android:textSize="40sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:gravity="center"
-                    android:padding="5dp"
-                    android:textSize="40sp"
-                    app:layout_constraintEnd_toStartOf="@+id/number5"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/number"
-                    tools:ignore="MissingConstraints" />
+                    android:orientation="horizontal"
+                    android:padding="5dp">
 
-                <TextView
-                    android:id="@+id/number5"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="24dp"
-                    android:background="@drawable/shep2"
+                    <TextView
+                        android:id="@+id/number7"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"                        android:layout_height="100dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/shep2"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textSize="40sp" />
+
+                    <TextView
+                        android:id="@+id/number8"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"                        android:layout_height="100dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/shep2"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textSize="40sp" />
+
+                    <TextView
+                        android:id="@+id/number9"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"                        android:layout_height="100dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/shep2"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textSize="40sp" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
                     android:gravity="center"
-                    android:padding="5dp"
-                    android:textSize="40sp"
-                    app:layout_constraintBottom_totopOf="@id/number8"
-                    app:layout_constraintTop_toBottomOf="@+id/number2"
-                    tools:ignore="MissingConstraints"
-                    tools:layout_editor_absoluteX="125dp" />
-
-                <TextView
-                    android:id="@+id/number6"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="28dp"
-                    android:background="@drawable/shep2"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:textSize="40sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toEndOf="@+id/number5"
-                    app:layout_constraintTop_toBottomOf="@+id/number3"
-                    tools:ignore="MissingConstraints" />
-
-                <TextView
-                    android:id="@+id/number7"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="4dp"
-                    android:background="@drawable/shep2"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:textSize="40sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/number8"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/number4"
-                    app:layout_constraintVertical_bias="1.0"
-                    tools:ignore="MissingConstraints" />
-
-                <TextView
-                    android:id="@+id/number8"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginEnd="24dp"
-                    android:background="@drawable/shep2"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:textSize="40sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/number9"
-                    app:layout_constraintTop_toBottomOf="@+id/number5"
-                    app:layout_constraintVertical_bias="1.0"
-                    tools:ignore="MissingConstraints" />
-
-                <TextView
-                    android:id="@+id/number9"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:background="@drawable/shep2"
-                    android:gravity="center"
-                    android:padding="5dp"
-                    android:textSize="40sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@id/constraint2"
-                    app:layout_constraintTop_toBottomOf="@+id/number6"
-                    app:layout_constraintVertical_bias="1.0" />
+                    android:orientation="horizontal"
+                    android:padding="5dp">
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <EditText
-                android:id="@+id/enter"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="35dp"
-                android:background="@drawable/shep"
-                android:hint="@string/enter"
-                android:inputType="textEmailAddress"
-                android:minHeight="48dp"
-                android:padding="5dp"
-                android:textSize="25sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.065"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/constraint2" />
+                    <EditText
+                        android:id="@+id/enter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shep"
+                        android:hint="@string/enter"
+                        android:inputType="textEmailAddress"
+                        android:minHeight="48dp"
+                        android:padding="5dp"
+                        android:textSize="20sp" />
 
 
-            <Button
-                android:id="@+id/check"
-                android:layout_width="125dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="15dp"
-                android:layout_marginTop="30dp"
-                android:text="@string/check"
-                android:textSize="25sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.95"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/constraint2" />
+                    <Button
+                        android:id="@+id/check"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="2"
+                        android:text="@string/check"
 
-            <Button
-                android:id="@+id/new_game"
-                android:layout_width="125dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:text="@string/new_game"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/enter" />
+                        android:textSize="20sp" />
+                </LinearLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/new_game"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginEnd="80dp"
+                        android:text="@string/new_game" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
     </ScrollView>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
+
+
