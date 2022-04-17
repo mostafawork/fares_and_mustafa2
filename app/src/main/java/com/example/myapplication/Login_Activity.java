@@ -13,28 +13,28 @@ import android.widget.Toast;
 
 public class Login_Activity extends AppCompatActivity {
 
-    EditText user_name, user_password;
+    EditText user_name_login, password_login;
     Button login, register;
-    RadioGroup rad;
-    RadioButton java;
+    RadioGroup radioGroup;
+    RadioButton remember;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        user_name = findViewById(R.id.user_name);
-        user_password = findViewById(R.id.password);
+        user_name_login = findViewById(R.id.user_name_login);
+        password_login = findViewById(R.id.password_login);
         login = findViewById(R.id.login);
         register = findViewById(R.id.register);
-        rad = findViewById(R.id.rad);
-        java = findViewById(R.id.java);
+        radioGroup = findViewById(R.id.radio_group);
+        remember = findViewById(R.id.remember);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String userName = user_name.getText().toString().trim();
-                String password = user_password.getText().toString().trim();
+                String userName = user_name_login.getText().toString().trim();
+                String password = password_login.getText().toString().trim();
                 if (userName.isEmpty()) {
                     Toast.makeText(Login_Activity.this, R.string.enterName, Toast.LENGTH_SHORT).show();
                 } else if (password.isEmpty()) {
