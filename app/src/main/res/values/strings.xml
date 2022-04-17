@@ -29,4 +29,9 @@
     <string name="login_out">Login out</string>
     <string name="enterName">the User Name can\'t be Empty !</string>
     <string name="userpasseord">the password can\'t be Empty !</string>
+    <string name="userpasseordre"> write again password !</string>
+    <string name="enterfullname">the full name can\'t be Empty !</string>
+    <string name="emailAddress">the emailAddress can\'t be Empty !</string>
+    <string name="gender">the gender can\'t be Empty !</string>
+
 </resources>

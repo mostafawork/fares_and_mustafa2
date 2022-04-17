@@ -2,4 +2,8 @@
 <resources>
     <string name="enterName">لا يمكن ترك حقل اسم المسخدم فارغاً !</string>
     <string name="userpasseord">لا يمكن ترك حقل كلمة المرور فارغاً !</string>
+    <string name="userpasseordre">أعد كتابة كلمة المرور !</string>
+    <string name="enterfullname">لايمكن  ترك حقل الإسم فارغا !</string>
+    <string name="emailAddress">لايمكن  ترك حقل البريد الألكتروني فارغا !</string>
+    <string name="gender">لايمكن  ترك حقل الجنس فارغا !</string>
 </resources>
