@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C3C6D8"
+    android:background="@drawable/shep2"
     tools:context=".register_Activity">
 
     <ScrollView
@@ -21,7 +21,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraint2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="10dp">
 
             <ImageView
                 android:id="@+id/edit_img"
@@ -37,13 +38,15 @@
                 android:id="@+id/full_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
+                android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/shep"
                 android:hint="@string/Full_name"
                 android:inputType="text"
                 android:minHeight="48dp"
                 android:padding="5dp"
+                android:paddingStart="10dp"
+                android:textColorHint="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/edit_img" />
@@ -52,13 +55,15 @@
                 android:id="@+id/email_address"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/shep"
                 android:hint="@string/email_address"
                 android:inputType="textEmailAddress"
                 android:minHeight="48dp"
                 android:padding="5dp"
+                android:paddingStart="10dp"
+                android:textColorHint="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/full_name" />
@@ -67,74 +72,92 @@
                 android:id="@+id/user_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/shep"
                 android:hint="@string/user_name"
+
                 android:inputType="textEmailAddress"
                 android:minHeight="48dp"
                 android:padding="5dp"
+                android:paddingStart="10dp"
+                android:textColorHint="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/email_address" />
 
-            <EditText
-                android:id="@+id/password"
-                android:layout_width="180dp"
+            <LinearLayout
+                android:id="@+id/lay"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/shep"
-                android:gravity="center|start"
-                android:hint="@string/password"
-                android:inputType="textPassword"
-                android:minHeight="48dp"
-                android:padding="5dp"
-                android:textAlignment="viewStart"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/user_name" />
-
-            <EditText
-                android:id="@+id/password_re"
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/shep"
-                android:gravity="center|start"
-                android:hint="@string/r_password"
-                android:inputType="textPassword"
-                android:minHeight="48dp"
-                android:padding="5dp"
-                android:textAlignment="viewStart"
-                app:layout_constraintBottom_toTopOf="@+id/password"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:textColorHint="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/user_name"
+                app:layout_constraintStart_toStartOf="@+id/user_name"
                 app:layout_constraintTop_toBottomOf="@id/user_name"
-                app:layout_constraintVertical_bias="0.0" />
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2.5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shep"
+                    android:gravity="center|start"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:minHeight="48dp"
+                    android:padding="5dp"
+                    android:paddingStart="10dp"
+                    android:textAlignment="viewStart"
+                    android:textColorHint="@color/white" />
+
+                <EditText
+                    android:id="@+id/password_re"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2.5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shep"
+                    android:gravity="center|start"
+                    android:hint="@string/r_password"
+                    android:inputType="textPassword"
+                    android:padding="5dp"
+                    android:paddingStart="10dp"
+                    android:textAlignment="viewStart"
+                    android:textColorHint="@color/white" />
+
+            </LinearLayout>
+
+
+
 
             <Spinner
                 android:id="@+id/spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="30dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:minHeight="48dp"
                 android:padding="5dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/password_re" />
-
+                app:layout_constraintTop_toBottomOf="@id/lay"
+                tools:layout_editor_absoluteX="40dp" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/date_baker_register"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="20dp"
                 android:padding="5dp"
                 android:paddingStart="20sp"
                 android:text="@string/Birthdate"
                 android:textSize="20sp"
+                android:onClick="openDatePicker"
+                android:textColor="@color/white"
+                android:drawableEnd="@drawable/ic_baseline_date_range_24"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/spinner"
@@ -148,16 +171,16 @@
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView">
+                app:layout_constraintTop_toBottomOf="@+id/date_baker_register">
 
                 <RadioButton
                     android:id="@+id/male"
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/white"
                     android:layout_marginHorizontal="50dp"
                     android:text="@string/male"
-                    android:textColor="#37474F"
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <RadioButton
@@ -166,7 +189,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="50dp"
                     android:text="@string/Female"
-                    android:textColor="#37474F"
+                    android:textColor="@color/white"
                     tools:ignore="TouchTargetSizeCheck" />
             </RadioGroup>
 
@@ -176,12 +199,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
                 android:layout_marginTop="20dp"
-                android:background="@color/white"
+                android:background="@drawable/shep_botten"
+                android:textColor="@color/white"
                 android:padding="5dp"
                 android:text="@string/save"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/radio_group" />
+                app:layout_constraintTop_toBottomOf="@id/radio_group"
+/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

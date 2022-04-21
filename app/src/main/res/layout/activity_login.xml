@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C3C6D8"
+    android:background="@drawable/shep2"
     tools:context=".Login_Activity">
 
     <ScrollView
@@ -45,8 +45,9 @@
                 android:hint="@string/user_name"
                 android:inputType="textEmailAddress"
                 android:minHeight="48dp"
-                android:padding="5dp"
-                android:textColorHint="#757575"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/img" />
@@ -62,9 +63,10 @@
                 android:hint="@string/password"
                 android:inputType="textPassword"
                 android:minHeight="48dp"
-                android:padding="5dp"
+                android:padding="10dp"
                 android:textAlignment="viewStart"
-                android:textColorHint="#757575"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/user_name_login" />
@@ -75,9 +77,11 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
-                android:layout_marginTop="40dp"
                 android:layout_marginStart="15dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/shep_botten"
                 android:text="@string/login"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toStartOf="@id/register"
                 app:layout_constraintHorizontal_bias="0.008"
                 app:layout_constraintStart_toStartOf="parent"
@@ -89,8 +93,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
                 android:layout_marginTop="40dp"
-                android:text="@string/register"
                 android:layout_marginEnd="15dp"
+                android:background="@drawable/shep_botten"
+                android:text="@string/register"
+                android:textColor="@color/white"
                 app:layout_constraintBottom_toTopOf="@+id/login"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.99"
@@ -108,12 +114,17 @@
                 app:layout_constraintTop_toBottomOf="@+id/login">
 
 
-                <RadioButton
+                <CheckBox
                     android:id="@+id/remember"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:buttonTint="#FFFFFF"
+                    android:checked="true"
+                    android:filterTouchesWhenObscured="false"
                     android:text="@string/remember"
-                    android:textColor="#37474F"
+                    android:textColor="#FFFFFF"
+                    android:textColorHighlight="#FF0000"
                     tools:ignore="TouchTargetSizeCheck" />
             </RadioGroup>
 

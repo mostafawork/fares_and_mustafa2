@@ -12,7 +12,7 @@
     <string name="male">ذكر</string>
     <string name="Female">أنثى</string>
     <string name="save">حفظ</string>
-    <string name="r_password">إعادة كتابة كلمة المرور</string>
+    <string name="r_password">كلمة المرور</string>
     <string name="Birthdate">الميلاد</string>
     <string name="login">تسجيل دخول</string>
     <string name="register">واجهة التسجيل تسجيل</string>
