@@ -96,6 +96,13 @@ public class register_Activity extends AppCompatActivity {
 
         });
 
+        dateBaker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                datePickerDialog.show();
+            }
+        });
+
 
 
 
@@ -168,9 +175,12 @@ public class register_Activity extends AppCompatActivity {
 
         //default should never happen
         return "JAN";
+
     }
-    public void openDatePicker(View view)
-    {
-        datePickerDialog.show();
-    }
+//    public void openDatePicker(View view)
+//    {
+//
+//
+//
+//    }
 }

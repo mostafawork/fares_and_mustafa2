@@ -92,11 +92,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="20dp"
+                android:orientation="horizontal"
                 android:textColorHint="@color/white"
                 app:layout_constraintEnd_toEndOf="@+id/user_name"
                 app:layout_constraintStart_toStartOf="@+id/user_name"
-                app:layout_constraintTop_toBottomOf="@id/user_name"
-                android:orientation="horizontal">
+                app:layout_constraintTop_toBottomOf="@id/user_name">
 
                 <EditText
                     android:id="@+id/password"
@@ -132,8 +132,6 @@
             </LinearLayout>
 
 
-
-
             <Spinner
                 android:id="@+id/spinner"
                 android:layout_width="match_parent"
@@ -154,7 +152,6 @@
                 android:background="@drawable/shep3"
                 android:drawableEnd="@drawable/ic_baseline_date_range_24"
                 android:gravity="center|start"
-                android:onClick="openDatePicker"
                 android:padding="5dp"
                 android:paddingStart="20sp"
                 android:paddingEnd="20sp"
@@ -181,9 +178,9 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
                     android:layout_marginHorizontal="50dp"
                     android:text="@string/male"
+                    android:textColor="@color/white"
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <RadioButton
@@ -203,13 +200,12 @@
                 android:layout_marginHorizontal="15dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/shep_botten"
-                android:textColor="@color/white"
                 android:padding="5dp"
                 android:text="@string/save"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/radio_group"
-/>
+                app:layout_constraintTop_toBottomOf="@id/radio_group" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
