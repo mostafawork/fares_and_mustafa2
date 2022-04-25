@@ -23,8 +23,6 @@ public class Game_Activity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("Save",MODE_PRIVATE);
         SharedPreferences.Editor myEdit = sharedPreferences.edit();
         boolean rem = sharedPreferences.getBoolean("rem", false);
-
-
         myEdit.putBoolean("login",rem);
         myEdit.commit();
 

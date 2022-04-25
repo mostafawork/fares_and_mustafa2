@@ -33,5 +33,29 @@
     <string name="enterfullname">the full name can\'t be Empty !</string>
     <string name="emailAddress">the emailAddress can\'t be Empty !</string>
     <string name="gender">the gender can\'t be Empty !</string>
+    <string name="Gender">Gender</string>
+
+    <string-array name="contre">
+
+        <item>Enter contre</item>
+        <item>palestine</item>
+        <item>Egypt</item>
+        <item>Quoter</item>
+        <item>SaudiArabia</item>
+        <item>Algeria</item>
+        <item>Kuwait</item>
+        <item>Lebanon</item>
+        <item>Mauritania</item>
+        <item>Morocco</item>
+        <item>Sudan</item>
+        <item>Tunisia</item>
+        <item>Syrian</item>
+        <item>Iraq</item>
+        <item>Yemen</item>
+        <item>Oman</item>
+        <item>Jordan</item>
+        <item>USA</item>
+
+    </string-array>
 
 </resources>

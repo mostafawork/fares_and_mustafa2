@@ -1,14 +1,18 @@
 package com.example.myapplication;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class settings extends AppCompatActivity {
 
-    Button show, show_last , change, clear;
+    Button show, show_last, change, clear;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +25,10 @@ public class settings extends AppCompatActivity {
         clear = findViewById(R.id.clear);
 
 
-
         show.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                show.setError("gr");
             }
         });
 
@@ -41,6 +44,7 @@ public class settings extends AppCompatActivity {
         change.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
 
             }
         });

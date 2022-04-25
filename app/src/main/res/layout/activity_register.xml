@@ -28,7 +28,7 @@
                 android:id="@+id/edit_img"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="40dp"
                 android:src="@drawable/ic_launcher_foreground"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -56,7 +56,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/shep"
                 android:hint="@string/email_address"
                 android:inputType="textEmailAddress"
@@ -73,10 +73,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/shep"
                 android:hint="@string/user_name"
-
                 android:inputType="textEmailAddress"
                 android:minHeight="48dp"
                 android:padding="5dp"
@@ -91,7 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:orientation="horizontal"
                 android:textColorHint="@color/white"
                 app:layout_constraintEnd_toEndOf="@+id/user_name"
@@ -136,12 +135,15 @@
                 android:id="@+id/spinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="30dp"
+                android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="20dp"
+                android:autofillHints="name"
+                android:background="@drawable/shep_spener"
+                android:entries="@array/contre"
                 android:minHeight="48dp"
                 android:padding="5dp"
                 app:layout_constraintTop_toBottomOf="@id/lay"
-                tools:layout_editor_absoluteX="40dp" />
+                tools:layout_editor_absoluteX="30dp" />
 
             <TextView
                 android:id="@+id/date_baker_register"
@@ -163,19 +165,35 @@
                 app:layout_constraintTop_toBottomOf="@id/spinner"
                 tools:ignore="RtlSymmetry" />
 
+            <TextView
+                android:id="@+id/ginder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center|start"
+                android:padding="5dp"
+                android:paddingStart="20sp"
+                android:paddingEnd="20sp"
+                android:text="@string/Gender"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/date_baker_register" />
+
             <RadioGroup
                 android:id="@+id/radio_group"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:orientation="horizontal"
+                android:background="@drawable/shep_botten"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/date_baker_register">
+                app:layout_constraintTop_toBottomOf="@+id/ginder">
 
                 <RadioButton
                     android:id="@+id/male"
-
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="50dp"

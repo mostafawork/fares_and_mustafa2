@@ -44,6 +44,8 @@ public class register_Activity extends AppCompatActivity {
         female = findViewById(R.id.female);
         save = findViewById(R.id.save);
         dateBaker = findViewById(R.id.date_baker_register);
+
+
         dateBaker.setText(getTodaysDate());
         initDatePicker();
 
@@ -116,35 +118,36 @@ public class register_Activity extends AppCompatActivity {
         int day = cal.get(Calendar.DAY_OF_MONTH);
         return makeDateString(day, month, year);
     }
-    private void initDatePicker()
-    {
-        DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener()
-        {
+    private void initDatePicker() {
+        DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener() {
             @Override
-            public void onDateSet(DatePicker datePicker, int year, int month, int day)
-            {
+            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
                 month = month + 1;
                 String date = makeDateString(day, month, year);
                 dateBaker.setText(date);
             }
         };
+    Calendar calendar = Calendar.getInstance();
 
         Calendar cal = Calendar.getInstance();
         int year = cal.get(Calendar.YEAR);
         int month = cal.get(Calendar.MONTH);
         int day = cal.get(Calendar.DAY_OF_MONTH);
 
-        int style = AlertDialog.THEME_HOLO_LIGHT;
+        int style = AlertDialog.BUTTON_POSITIVE;
 
         datePickerDialog = new DatePickerDialog(this, style, dateSetListener, year, month, day);
-        //datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
-
     }
 
     private String makeDateString(int day, int month, int year)
     {
+
         return getMonthFormat(month) + " " + day + " " + year;
+
     }
+
+//هين حطينا لما يضغط على الشهر يظهر في Textview اسم الشهر
+
 
     private String getMonthFormat(int month)
     {
@@ -173,14 +176,9 @@ public class register_Activity extends AppCompatActivity {
         if(month == 12)
             return "DEC";
 
-        //default should never happen
+//default شهر JAN
         return "JAN";
 
     }
-//    public void openDatePicker(View view)
-//    {
-//
-//
-//
-//    }
+
 }
