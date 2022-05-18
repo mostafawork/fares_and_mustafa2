@@ -25,7 +25,6 @@ public class Login_Activity extends AppCompatActivity {
     CheckBox remember;
     DBHelper DB;
     TextInputLayout input_user_name_login, input_password_login;
-//kkkk
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -114,8 +113,8 @@ public class Login_Activity extends AppCompatActivity {
             return false;
         }
 
-        if (password.length() < 6) {
-            input_password_login.setError("Password is too short (Min. 6 Characters)");
+        if (password.length() < 8) {
+            input_password_login.setError("Password is too short (Min. 8 Characters)");
             return false;
         }
 

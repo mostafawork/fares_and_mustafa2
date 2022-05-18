@@ -9,21 +9,13 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.widget.ImageView;
-import android.provider.MediaStore;
 import android.net.Uri;
 import android.content.SharedPreferences;
-import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.media.Image;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -36,7 +28,7 @@ import java.util.Calendar;
 public class register_Activity extends AppCompatActivity {
 
     ImageView edit_img;
-    EditText full_name, email_address, user_name, password, password_re;
+    EditText full_name, email_address, user_name, _password, password_re;
     RadioGroup radio_group;
     RadioButton male, female;
     Button save;
@@ -54,7 +46,7 @@ public class register_Activity extends AppCompatActivity {
         full_name = findViewById(R.id.full_name);
         email_address = findViewById(R.id.email_address);
         user_name = findViewById(R.id.user_name);
-        password = findViewById(R.id.password);
+        _password = findViewById(R.id.password);
         password_re = findViewById(R.id.password_re);
         radio_group = findViewById(R.id.radio_group);
         male = findViewById(R.id.male);
@@ -69,8 +61,8 @@ public class register_Activity extends AppCompatActivity {
         edit_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Intent.ACTION_PICK,
-                        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                Intent i = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
                 startActivityForResult(i, 111);
 
             }
@@ -90,40 +82,35 @@ public class register_Activity extends AppCompatActivity {
             public void onClick(View view) {
 
                 String userName = user_name.getText().toString().trim();
-                String password_now = password.getText().toString().trim();
+                String password_now = _password.getText().toString().trim();
                 String emailAddress = email_address.getText().toString().trim();
                 String fullName = full_name.getText().toString().trim();
-                String password_re = password.getText().toString().trim();
-
-                if (userName.isEmpty()) {
-                    Toast.makeText(register_Activity.this, R.string.enterName, Toast.LENGTH_SHORT).show();
-                } else if (fullName.isEmpty()) {
-                    Toast.makeText(register_Activity.this, R.string.enterName, Toast.LENGTH_SHORT).show();
-                } else if (emailAddress.isEmpty()) {
-                    Toast.makeText(register_Activity.this, R.string.emailAddress, Toast.LENGTH_SHORT).show();
-                } else if (password_now.isEmpty()) {
-                    Toast.makeText(register_Activity.this, R.string.userpasseord, Toast.LENGTH_SHORT).show();
-                } else if (password_re.isEmpty()) {
-                    Toast.makeText(register_Activity.this, R.string.userpasseordre, Toast.LENGTH_SHORT).show();
-                }
+                String rePassword = password_re.getText().toString().trim();
+                validateUserName(userName);
+                validateFullName(fullName);
+                validateEmail(emailAddress);
+                validatePassword(password_now, rePassword);
                 if (male.isChecked() || female.isChecked()) {
                     Toast.makeText(register_Activity.this, R.string.gender, Toast.LENGTH_SHORT).show();
                 }
-                if (!userName.isEmpty() && !fullName.isEmpty() && !emailAddress.isEmpty() && !password_now.isEmpty() && !password_re.isEmpty()) {
+                if (!userName.isEmpty() && !fullName.isEmpty() && !emailAddress.isEmpty() && !password_now.isEmpty() && !rePassword.isEmpty()) {
                     Boolean checkuser = DB.checkusername(userName);
                     if (!checkuser) {
                         Boolean insert = DB.insertData(userName, password_now);
-                        if (insert) {
+                        Boolean insertDetails = DB.insertDetails(userName, fullName, emailAddress, "", "", "" + radio_group.isClickable());
+                        if (insert && insertDetails) {
                             Toast.makeText(getApplicationContext(), "Registered successfully", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(getApplicationContext(), Login_Activity.class);
                             SharedPreferences.Editor myEdit = sharedPreferences.edit();
                             myEdit.putBoolean("rem", radio_group.isClickable());
                             myEdit.putString("user", userName);
                             myEdit.putString("password", password_now);
-                            myEdit.commit();
+                            myEdit.apply();
                             startActivity(intent);
                             finish();
                         }
+                    } else {
+                        Toast.makeText(getApplicationContext(), "the user name is already Exists!!", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -158,8 +145,6 @@ public class register_Activity extends AppCompatActivity {
                 dateBaker.setText(date);
             }
         };
-        Calendar calendar = Calendar.getInstance();
-
         Calendar cal = Calendar.getInstance();
         int year = cal.get(Calendar.YEAR);
         int month = cal.get(Calendar.MONTH);
@@ -230,6 +215,61 @@ public class register_Activity extends AppCompatActivity {
             }
         }
     }
+
+    private Boolean validateUserName(String userName) {
+
+        if (userName.isEmpty()) {
+            user_name.setError(getString(R.string.enterName));
+            return false;
+        }
+        user_name.setError(null);
+        return true;
+    }
+
+    private Boolean validateFullName(String fullName) {
+
+        if (fullName.isEmpty()) {
+            full_name.setError(getString(R.string.enterfullname));
+            return false;
+        }
+        full_name.setError(null);
+        return true;
+    }
+
+    private Boolean validateEmail(String email) {
+
+        if (email.isEmpty()) {
+            email_address.setError(getString(R.string.emailAddress));
+            return false;
+        }
+        email_address.setError(null);
+        return true;
+    }
+
+    private Boolean validatePassword(String password, String rePassword) {
+
+        if (password.isEmpty()) {
+            _password.setError(getString(R.string.userpasseord));
+            return false;
+        }
+        if (rePassword.isEmpty()) {
+            password_re.setError(getString(R.string.userpasseordre));
+            return false;
+        }
+        if (!(password.equals(rePassword))) {
+            password_re.setError(getString(R.string.comformPassword));
+            _password.setError(getString(R.string.comformPassword));
+            return false;
+        }
+        if (password.length() < 8) {
+            _password.setError("Password is too short (Min. 8 Characters)");
+            return false;
+        }
+        _password.setError(null);
+        password_re.setError(null);
+        return true;
+    }
+
 }
 
 

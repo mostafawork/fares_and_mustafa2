@@ -21,6 +21,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import java.util.ArrayList;
 
@@ -29,6 +30,7 @@ public class Game_Activity extends AppCompatActivity {
     TextView score, tv_name, tv_age;
     Button check, new_game;
     EditText enter;
+    Toolbar toolbar;
     //  عرفنا هين ال TextView وعرفنا كمان ArrayList عشان نحط الأرقام فيها
     TextView number1, number2, number3, number4, number5, number6, number7, number8, number9;
     ArrayList<String> cars = new ArrayList<String>();
@@ -40,6 +42,7 @@ public class Game_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+
         score = findViewById(R.id.score);
         tv_name = findViewById(R.id.tv_name);
         tv_age = findViewById(R.id.tv_age);
@@ -55,6 +58,32 @@ public class Game_Activity extends AppCompatActivity {
         number7 = findViewById(R.id.number7);
         number8 = findViewById(R.id.number8);
         number9 = findViewById(R.id.number9);
+        toolbar = findViewById(R.id.toolbar2);
+
+        toolbar.inflateMenu(R.menu.menu);
+        toolbar.setSubtitle("sex");
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                if (item.getItemId() == R.id.stings) {
+                    Intent intent = new Intent(getApplicationContext(), settings.class);
+                    startActivity(intent);
+                    return true;
+                } else if (item.getItemId() == R.id.out) {
+                    SharedPreferences sharedPreferences = getSharedPreferences("Save", MODE_PRIVATE);
+                    SharedPreferences.Editor myEdit = sharedPreferences.edit();
+                    myEdit.putBoolean("rem", false);
+                    myEdit.apply();
+                    Intent intent2 = new Intent(getApplicationContext(), Login_Activity.class);
+                    startActivity(intent2);
+                    finish();
+                    return true;
+                } else {
+                    return false;
+                }
+
+            }
+        });
 
         //بعدها استدعينا كلاس الQuestion
         Question question = Util.generateQuestion();
@@ -76,7 +105,7 @@ public class Game_Activity extends AppCompatActivity {
                 new_game.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent intent =new Intent(getApplicationContext(), Game_Activity.class);
+                        Intent intent = new Intent(getApplicationContext(), Game_Activity.class);
                         startActivity(intent);
                         finish();
                     }
@@ -106,33 +135,32 @@ public class Game_Activity extends AppCompatActivity {
                 } else {
 
 
-
                     if (Enter.equals(Entere)) {
-                    new AlertDialog.Builder(context)
-                            .setTitle("Well done")
-                            .setMessage("your answer is correct")
-                            .setPositiveButton("Next Level", new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                }
-                            })
-                            .setNegativeButton("Cancel", null)
-                            .setIcon(R.drawable.ic_baseline_check_24)
-                            .setCancelable(false)
-                            .show();
-                    String x = score.getText().toString();
-                    score.setText("score : " + (sco += 1));
-                } else {
-                    new AlertDialog.Builder(context)
-                            .setTitle("wrong answer")
-                            .setMessage("Try again...")
-                            .setPositiveButton("New game", new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                }
-                            })
-                            .setNegativeButton("Cancel", null)
-                            .setIcon(R.drawable.ic_baseline_dangerous_24)
-                            .show();
-                }
+                        new AlertDialog.Builder(context)
+                                .setTitle("Well done")
+                                .setMessage("your answer is correct")
+                                .setPositiveButton("Next Level", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                    }
+                                })
+                                .setNegativeButton("Cancel", null)
+                                .setIcon(R.drawable.ic_baseline_check_24)
+                                .setCancelable(false)
+                                .show();
+                        String x = score.getText().toString();
+                        score.setText("score : " + (sco += 1));
+                    } else {
+                        new AlertDialog.Builder(context)
+                                .setTitle("wrong answer")
+                                .setMessage("Try again...")
+                                .setPositiveButton("New game", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                    }
+                                })
+                                .setNegativeButton("Cancel", null)
+                                .setIcon(R.drawable.ic_baseline_dangerous_24)
+                                .show();
+                    }
                 }
             }
 
@@ -153,28 +181,6 @@ public class Game_Activity extends AppCompatActivity {
         super.onCreateContextMenu(menu, v, menuInfo);
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.stings:
-                Intent intent = new Intent(getApplicationContext(), settings.class);
-                startActivity(intent);
-                return true;
-            case R.id.out:
-                SharedPreferences sharedPreferences = getSharedPreferences("Save", MODE_PRIVATE);
-                SharedPreferences.Editor myEdit = sharedPreferences.edit();
-                myEdit.putBoolean("rem", false);
-                myEdit.apply();
-                Intent intent2 = new Intent(getApplicationContext(), Login_Activity.class);
-                startActivity(intent2);
-                finish();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-
     }
 }
 

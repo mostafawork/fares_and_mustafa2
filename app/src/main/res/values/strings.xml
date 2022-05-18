@@ -34,6 +34,7 @@
     <string name="emailAddress">the emailAddress can\'t be Empty !</string>
     <string name="gender">the gender can\'t be Empty !</string>
     <string name="Gender">Gender</string>
+    <string name="comformPassword">password doesn\'t match</string>
 
     <string-array name="contre">
 

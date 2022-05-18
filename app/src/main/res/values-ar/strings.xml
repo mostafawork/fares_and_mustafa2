@@ -35,6 +35,7 @@
     <string name="settings">الإعدادات</string>
     <string name="login_out">تسجيل خروج</string>
     <string name="age">العمر</string>
+    <string name="comformPassword">خطأ في كلمة المرور</string>
 
     <string-array name="contre">
         <item>اختر الدولة</item>
