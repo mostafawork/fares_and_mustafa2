@@ -55,7 +55,6 @@ public class register_Activity extends AppCompatActivity {
         dateBaker = findViewById(R.id.date_baker_register);
         DB = new DBHelper(this);
 
-
         dateBaker.setText(getTodaysDate());
         initDatePicker();
         edit_img.setOnClickListener(new View.OnClickListener() {
@@ -269,6 +268,8 @@ public class register_Activity extends AppCompatActivity {
         password_re.setError(null);
         return true;
     }
+    //
+
 
 }
 
