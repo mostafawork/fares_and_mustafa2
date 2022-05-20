@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="@drawable/shep_stings_btn"
     android:focusableInTouchMode="true"
     android:gravity="center"
     tools:context=".Login_Activity">
@@ -43,7 +43,7 @@
             android:id="@+id/input_user_name_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="#96ffffff"
+            android:textColorHint="#96000000"
             android:theme="@style/EditScreenTextInputLayoutStyle"
             app:errorEnabled="true">
 
@@ -51,19 +51,21 @@
                 android:id="@+id/user_name_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/shep"
+                android:backgroundTint="@color/white"
                 android:drawableStart="@drawable/email"
                 android:drawablePadding="10dp"
                 android:hint="@string/user_name"
                 android:inputType="text"
                 android:padding="15dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/input_password_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="#96ffffff"
+            android:textColorHint="#96000000"
             android:theme="@style/EditScreenTextInputLayoutStyle"
             app:errorEnabled="true"
             app:passwordToggleEnabled="true">
@@ -72,12 +74,14 @@
                 android:id="@+id/password_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/shep"
+                android:backgroundTint="@color/white"
                 android:drawableStart="@drawable/password"
                 android:drawablePadding="10dp"
                 android:hint="@string/password"
                 android:inputType="textPassword"
                 android:padding="15dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -103,7 +107,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:backgroundTint="@color/pink"
+                android:background="@drawable/shep_botten"
+                android:backgroundTint="#F6308D"
                 android:fontFamily="@font/calibri"
                 android:text="Sign up"
                 android:textAllCaps="false"
@@ -116,7 +121,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:backgroundTint="@color/pink"
+                android:background="@drawable/shep_botten"
+                android:backgroundTint="#F6308D"
                 android:fontFamily="@font/calibri"
                 android:text="Sign in"
                 android:textAllCaps="false"

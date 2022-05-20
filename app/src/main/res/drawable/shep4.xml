@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
     <corners
-        android:radius="7dp"
+        android:radius="10dp"
+        android:bottomLeftRadius="1dp"
+        android:topRightRadius="1dp"
         />
     <gradient
         android:angle="90"
@@ -18,8 +20,8 @@
         android:bottom="0dp"
         />
     <size
-        android:width="200dp"
-        android:height="50dp"
+        android:width="125dp"
+        android:height="30dp"
         />
     <stroke
         android:width="2dp"

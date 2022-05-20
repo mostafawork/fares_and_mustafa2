@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/shep_main"
+    android:background="@drawable/shep_setings"
     android:orientation="vertical"
     tools:context=".Game_Activity">
 
@@ -49,12 +49,12 @@
                         android:id="@+id/score"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/shep"
+                        android:background="@drawable/shep4"
                         android:gravity="start|center"
                         android:padding="5dp"
                         android:paddingStart="10dp"
                         android:text="@string/Score"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="20sp" />
                 </LinearLayout>
 
@@ -84,15 +84,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:layout_marginStart="15dp"
-                        android:layout_weight="1"
-                        android:layout_marginEnd="15dp"
-                        android:background="@drawable/shep"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="5"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/shep5"
                         android:gravity="start|center"
                         android:padding="5dp"
                         android:paddingStart="10dp"
                         android:text="@string/name"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="20sp" />
 
                     <TextView
@@ -100,13 +100,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginEnd="15dp"
-                        android:background="@drawable/shep_age"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/shep5"
                         android:gravity="start|center"
                         android:paddingStart="10dp"
                         android:text="@string/age"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="20sp" />
 
                 </LinearLayout>
@@ -125,7 +126,7 @@
                     android:layout_marginStart="15dp"
                     android:layout_marginEnd="15dp"
                     android:layout_marginTop="15dp"
-                    android:background="@color/black"
+                    android:background="@color/white"
                     />
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -145,7 +146,7 @@
                         android:background="@drawable/shep_game"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="40sp" />
 
                     <TextView
@@ -154,10 +155,10 @@
                         android:layout_height="100dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
-                        android:background="@drawable/shep_game"
+                        android:background="@drawable/shep_game2"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="40sp" />
 
                     <TextView
@@ -167,10 +168,10 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"
-                        android:background="@drawable/shep_game"
+                        android:background="@drawable/shep_game3"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="40sp" />
 
 
@@ -190,9 +191,9 @@
                         android:layout_height="100dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
-                        android:background="@drawable/shep_game"
+                        android:background="@drawable/shep_game2"
                         android:gravity="center"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="40sp" />
 
                     <TextView
@@ -201,9 +202,9 @@
                         android:layout_height="100dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
-                        android:background="@drawable/shep_game"
+                        android:background="@drawable/shep_game3"
                         android:gravity="center"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="40sp" />
 
                     <TextView
@@ -215,7 +216,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/shep_game"
                         android:gravity="center"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="40sp" />
                 </LinearLayout>
 
@@ -236,7 +237,7 @@
                         android:background="@drawable/shep_game"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="40sp" />
 
                     <TextView
@@ -245,10 +246,10 @@
                         android:layout_height="100dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
-                        android:background="@drawable/shep_game"
+                        android:background="@drawable/shep_game3"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="40sp" />
 
                     <TextView
@@ -258,10 +259,10 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"
-                        android:background="@drawable/shep_game"
+                        android:background="@drawable/shep_game2"
                         android:gravity="center"
                         android:padding="5dp"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="40sp" />
 
 
@@ -280,7 +281,7 @@
                     android:layout_marginStart="15dp"
                     android:layout_marginEnd="15dp"
                     android:layout_marginTop="5dp"
-                    android:background="@color/black"
+                    android:background="@color/white"
                     />
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -302,11 +303,12 @@
                         android:hint="@string/enter"
                         android:inputType="number"
                         android:minHeight="48dp"
+
                         android:padding="5dp"
                         android:paddingStart="10dp"
-                        android:textColor="@color/white"
-                        android:textColorHint="@color/black"
-                        android:textSize="20sp"
+                        android:textColor="#4331FE"
+                        android:textColorHint="#4331FE"
+                        android:textSize="25sp"
                         android:textStyle="bold" />
 
 
@@ -317,11 +319,11 @@
                         android:layout_marginStart="5dp"
                         android:layout_marginEnd="5dp"
                         android:layout_weight="2"
-                        android:background="@drawable/shep_botten_game"
+                        android:background="@drawable/shep_stings_btn"
                         android:gravity="center"
                         android:text="@string/check"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:textSize="21sp"
 
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -339,10 +341,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="80dp"
                         android:layout_marginEnd="80dp"
-                        android:background="@drawable/shep_naw"
+                        android:background="@drawable/shep_botten"
                         android:text="@string/new_game"
-                        android:textColor="@color/white"
-                        android:textSize="18sp"
+                        android:textColor="@color/yellow"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>

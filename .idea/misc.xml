@@ -3,16 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.175" />
+        <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/drawable/ic_baseline_check_24.xml" value="0.175" />
+        <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/drawable/ic_baseline_check_box_outline_blank_24.xml" value="0.175" />
+        <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/drawable/ic_baseline_dangerous_24.xml" value="0.175" />
         <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/drawable/ic_baseline_date_range_24.xml" value="0.1475" />
+        <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/drawable/ic_baseline_keyboard_arrow_down_24.xml" value="0.175" />
+        <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1995" />
+        <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/drawable/ic_baseline_videogame_asset_24.xml" value="0.175" />
+        <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/drawable/ic_launcher_background.xml" value="0.175" />
+        <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/drawable/ic_twotone_person_add_alt_1_24.xml" value="0.175" />
         <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/drawable/ic_user.xml" value="0.1325" />
+        <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/drawable/password.xml" value="0.175" />
         <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/drawable/shep.xml" value="0.183" />
         <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/drawable/shep2.xml" value="0.183" />
         <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/drawable/shep3.xml" value="0.183" />
         <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/drawable/shep4.xml" value="0.2535" />
-        <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/drawable/shep_age.xml" value="0.2535" />
+        <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/drawable/shep5.xml" value="0.2475" />
+        <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/drawable/shep_age.xml" value="0.2" />
         <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/drawable/shep_botten.xml" value="0.2765" />
         <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/drawable/shep_botten_game.xml" value="0.1475" />
         <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/drawable/shep_game.xml" value="0.1345" />
+        <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/drawable/shep_game2.xml" value="0.175" />
+        <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/drawable/shep_game3.xml" value="0.175" />
         <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/drawable/shep_main.xml" value="0.1345" />
         <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/drawable/shep_naw.xml" value="0.2535" />
         <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/drawable/shep_radio.xml" value="0.1475" />
@@ -28,6 +41,7 @@
         <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/layout/menu.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/layout/test.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/menu/menu.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ASUS/MyApplication32/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.175" />
         <entry key="..\:/Users/Compulife.Co/Desktop/fares_and_mustafa2-fares/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1795" />
         <entry key="..\:/Users/Compulife.Co/Desktop/fares_and_mustafa2-fares/app/src/main/res/drawable/email.xml" value="0.1795" />
         <entry key="..\:/Users/Compulife.Co/Desktop/fares_and_mustafa2-fares/app/src/main/res/drawable/ic_baseline_check_24.xml" value="0.1795" />
