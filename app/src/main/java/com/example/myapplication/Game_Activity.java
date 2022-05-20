@@ -38,6 +38,9 @@ public class Game_Activity extends AppCompatActivity {
     Context context = this;
     int sco;
 
+
+    //
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
